@@ -15,15 +15,15 @@ double getDistribution(std::vector<uint8_t>& data){
 	return (double)count/N;
 }
 
-double countCorell(std::vector<uint8_t>& plain, std::vector<uint8_t>& chifer){
-	int N = 8*chifer.size();
+double countCorell(std::vector<uint8_t>& plain, std::vector<uint8_t>& cipher){
+	int N = 8*cipher.size();
 	int corell = 0;
-	for(int i = 0; i < chifer.size() - plain.size(); i++){
+	for(int i = 0; i < cipher.size() - plain.size(); i++){
 		plain.push_back(' ');
 	}
-	for(int i = 0; i < chifer.size(); i++){
+	for(int i = 0; i < cipher.size(); i++){
 		uint8_t p = plain[i];
-		uint8_t c = chifer[i];
+		uint8_t c = cipher[i];
 		for(int j = 0; j < 8; j++){
 			uint8_t tmpP = (p >> j) & 1;
             uint8_t tmpC = (c >> j) & 1;
