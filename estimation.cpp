@@ -26,8 +26,8 @@ double countCorell(std::vector<uint8_t>& plain, std::vector<uint8_t>& cipher){
 		uint8_t c = cipher[i];
 		for(int j = 0; j < 8; j++){
 			uint8_t tmpP = (p >> j) & 1;
-            uint8_t tmpC = (c >> j) & 1;
-            corell += (2 * tmpP - 1) * (2 * tmpC - 1);
+		    	uint8_t tmpC = (c >> j) & 1;
+            		corell += (2 * tmpP - 1) * (2 * tmpC - 1);
 		}
 	}
 	std::cout << corell << std::endl;
