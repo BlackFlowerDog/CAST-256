@@ -41,3 +41,10 @@ The fourth argument is an operating mode: encryption/decryption with CFB (yes) o
 Key is on a separate file "key.txt" in the same directory as main. If it's size is not 128, 160, 192, 224 or 256 bits the program will terminate with the error. If number of input bits is not a multiply of 128, then the required number of characters will be added to the end to fulfill this condition.
 
 ### Distribution estimation
+
+Derivation of correlation estimates and distribution of zeros and ones:
+
+![image](https://user-images.githubusercontent.com/115879518/207757044-6c4d8bd8-98db-433b-b2ad-a5188a6e215c.png)
+
+Distribution of zeros and ones shows the frequency of their occurrence. Good if it will be approximately 0.5 for ciphertext.
+Correlation determines the relationship between plaintext and cipher text. Good if it will be approximately 0.
