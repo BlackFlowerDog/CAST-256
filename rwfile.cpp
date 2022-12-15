@@ -30,7 +30,7 @@ BITMAPFILEHEADER readFileHeader(FILE* file){
 	BITMAPFILEHEADER fh;
 	fread(&fh,sizeof(BITMAPFILEHEADER),1,file);
 	if(fh.bfType != BMP){
-        throw "image is not BMP"
+        	throw "image is not BMP"
 	}
 	return fh;
 }
